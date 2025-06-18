@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Fitness Pro",
+    "subscribers": 15000,
+    "country": "US",
+    "keyword": "fitness",
+    "link": "https://youtube.com/@fitnesspro"
+  },
+  {
+    "name": "CodeWithSam",
+    "subscribers": 55000,
+    "country": "IN",
+    "keyword": "coding",
+    "link": "https://youtube.com/@codewithsam"
+  },
+  {
+    "name": "Marketing Tips",
+    "subscribers": 120000,
+    "country": "UK",
+    "keyword": "marketing",
+    "link": "https://youtube.com/@marketingtips"
+  }
+]
