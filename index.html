@@ -2,67 +2,43 @@
 <html lang="en">
 <head>
   <!-- ✅ SEO META TAGS START -->
-<title>YouTube Channel Explorer – Discover Channels by Niche, Subs & Country</title>
-<meta name="title" content="YouTube Channel Explorer – Discover Channels by Niche, Subs & Country">
-<meta name="description" content="Find thousands of YouTube channels by niche, subscriber count, and location. A free Playboard alternative with zero limits.">
-<meta name="keywords" content="YouTube channel finder, channel database, YouTube search tool, Playboard alternative, YouTube channels by niche, YouTube discovery tool, influencer marketing">
-<meta name="robots" content="index, follow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://badshah466.github.io/YouTube-Channel-Explorer/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YouTube Channel Explorer – Discover Channels by Niche, Subs & Country">
-<meta property="og:description" content="Free YouTube channel search tool. Filter by niche, subs, and country. No login. No limits.">
-<meta property="og:url" content="https://badshah466.github.io/YouTube-Channel-Explorer/">
-<meta property="og:image" content="https://badshah466.github.io/YouTube-Channel-Explorer/preview.png">
-<!-- ✅ SEO META TAGS END -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YouTube Channel Explorer</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>YouTube Channel Explorer – Discover Channels by Niche, Subs & Country</title>
+  <meta name="title" content="YouTube Channel Explorer – Discover Channels by Niche, Subs & Country">
+  <meta name="description" content="Find thousands of YouTube channels by niche, subscriber count, and location. A free Playboard alternative with zero limits.">
+  <meta name="keywords" content="YouTube channel finder, channel database, YouTube search tool, Playboard alternative, YouTube channels by niche, YouTube discovery tool, influencer marketing">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://badshah466.github.io/YouTube-Channel-Explorer/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="YouTube Channel Explorer – Discover Channels by Niche, Subs & Country">
+  <meta property="og:description" content="Free YouTube channel search tool. Filter by niche, subs, and country. No login. No limits.">
+  <meta property="og:url" content="https://badshah466.github.io/YouTube-Channel-Explorer/">
+  <meta property="og:image" content="https://badshah466.github.io/YouTube-Channel-Explorer/preview.png">
+  <!-- ✅ SEO META TAGS END -->
 
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="https://badshah466.github.io/YouTube-Channel-Explorer/favicon.ico" type="image/x-icon">
 </head>
-<body>
-  <div style="text-align: center; margin-top: 30px;">
-  <input id="keyword" type="text" placeholder="Keyword..." style="padding: 6px;" />
-  <select id="subsRange" style="padding: 6px;">
-    <option value="">Any Subs</option>
-    <option value="1-10K">1K–10K</option>
-    <option value="10K-100K">10K–100K</option>
-    <option value="100K-1M">100K–1M</option>
-    <option value="1M+">1M+</option>
-  </select>
-  <input id="country" type="text" placeholder="Country..." style="padding: 6px;" />
-  <button onclick="searchChannels()" style="padding: 6px 12px;">Search</button>
-</div>
 
-  <h1 style="font-size: 2em; text-align: center; margin-top: 20px;">
-  YouTube Channel Explorer – Search Channels by Niche, Subscribers & Country
-</h1>
+<body>
+  <h1 style="text-align: center; margin-top: 20px;">
+    YouTube Channel Explorer – Browse by Niche
+  </h1>
 
   <p style="text-align: center; max-width: 700px; margin: 10px auto; font-size: 1em; color: #555;">
-  Discover thousands of YouTube channels by niche, subscriber count, and country. Use filters to find creators that fit your campaign or collaboration — completely free and unlimited.
-</p>
-<div id="channel-list"></div>
-<script src="script.js"></script>
+    Discover thousands of YouTube channels filtered by niche and subscriber range. Click on a category to begin.
+  </p>
 
-  <div class="filters">
-    <input type="text" id="keyword" placeholder="Enter keyword (e.g. fitness)" />
-    <select id="subscribers">
-      <option value="">All Subscribers</option>
-      <option value="1-10">1K - 10K</option>
-      <option value="10-100">10K - 100K</option>
-      <option value="100-1000">100K - 1M</option>
-    </select>
-    <select id="country">
-      <option value="">All Countries</option>
-      <option value="US">United States</option>
-      <option value="IN">India</option>
-      <option value="UK">United Kingdom</option>
-    </select>
-    <button onclick="filterChannels()">Search</button>
+  <!-- ✅ PREDEFINED TAG BUTTONS -->
+  <div style="text-align: center; margin: 20px;">
+    <button class="tag-btn" onclick="filterByTag('Fitness')">Fitness</button>
+    <button class="tag-btn" onclick="filterByTag('Business')">Business</button>
+    <button class="tag-btn" onclick="filterByTag('Tech')">Tech</button>
+    <button class="tag-btn" onclick="filterByTag('Gaming')">Gaming</button>
   </div>
 
+  <!-- ✅ CHANNEL CARDS OUTPUT -->
   <div id="channel-list"></div>
 
   <script src="script.js"></script>
