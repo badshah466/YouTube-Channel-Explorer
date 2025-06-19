@@ -1,22 +1,8 @@
-[
-  {
-    "name": "Graham Stephan",
-    "subs": "700K",
-    "url": "https://www.youtube.com/channel/UCV6KDgJskWaEckne5aPA0aQ"
-  },
-  {
-    "name": "MrBeast",
-    "subs": "250M",
-    "url": "https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA"
-  },
-  {
-    "name": "Ali Abdaal",
-    "subs": "5M",
-    "url": "https://www.youtube.com/channel/UCoOae5nYA7VqaXzerajD0lg"
-  },
-  {
-    "name": "Marques Brownlee",
-    "subs": "18M",
-    "url": "https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ"
-  }
-]
+{
+  "name": "MrBeast",
+  "subs": "250M",
+  "url": "https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA",
+  "logo": "https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s160-c-k-c0x00ffffff-no-rj",
+  "country": "United States",
+  "niche": "Fitness"
+}
