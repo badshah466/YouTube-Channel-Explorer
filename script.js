@@ -1,22 +1,35 @@
-let allChannels = [];
+function parseSubs(subText) {
+  if (subText.includes('M')) return parseFloat(subText) * 1_000_000;
+  if (subText.includes('K')) return parseFloat(subText) * 1_000;
+  return parseFloat(subText);
+}
 
-fetch('channels.json')
-  .then(response => response.json())
-  .then(data => {
-    allChannels = data;
-  })
-  .catch(error => {
-    console.error('Error loading channel data:', error);
+function searchChannels() {
+  const keyword = document.getElementById('keyword').value.toLowerCase();
+  const subsRange = document.getElementById('subsRange').value;
+  const country = document.getElementById('country').value.toLowerCase();
+  const container = document.getElementById('channel-list');
+  container.innerHTML = '';
+
+  const filtered = allChannels.filter(channel => {
+    const nameMatch = channel.name.toLowerCase().includes(keyword);
+    const countryMatch = !country || (channel.country && channel.country.toLowerCase().includes(country));
+    
+    let subsMatch = true;
+    const subs = parseSubs(channel.subs);
+
+    if (subsRange === '1-10K') subsMatch = subs >= 1000 && subs <= 10000;
+    else if (subsRange === '10K-100K') subsMatch = subs >= 10000 && subs <= 100000;
+    else if (subsRange === '100K-1M') subsMatch = subs >= 100000 && subs <= 1000000;
+    else if (subsRange === '1M+') subsMatch = subs >= 1000000;
+
+    return nameMatch && subsMatch && countryMatch;
   });
 
-// Triggered when search is performed
-function searchChannels(query) {
-  const container = document.getElementById('channel-list');
-  container.innerHTML = ''; // clear old results
-
-  const filtered = allChannels.filter(channel =>
-    channel.name.toLowerCase().includes(query.toLowerCase())
-  );
+  if (filtered.length === 0) {
+    container.innerHTML = `<p style="text-align:center; color: gray;">No channels found</p>`;
+    return;
+  }
 
   filtered.forEach(channel => {
     const logoURL = channel.logo || `https://ui-avatars.com/api/?name=${encodeURIComponent(channel.name)}&background=FF0000&color=fff&rounded=true`;
@@ -45,8 +58,4 @@ function searchChannels(query) {
 
     container.appendChild(card);
   });
-
-  if (filtered.length === 0) {
-    container.innerHTML = `<p style="text-align:center; color: gray;">No channels found for "${query}"</p>`;
-  }
 }
