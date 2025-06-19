@@ -4,6 +4,15 @@
     "subs": "250M",
     "url": "https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA",
     "logo": "https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s160-c-k-c0x00ffffff-no-rj",
-    "country": "United States"
+    "country": "United States",
+    "niche": "Business"
+  },
+  {
+    "name": "Chloe Ting",
+    "subs": "25M",
+    "url": "https://www.youtube.com/channel/UCCgLoMYIyP0U56dEhEL1wXQ",
+    "logo": "https://yt3.googleusercontent.com/ytc/AOPolaR4WlD7JhFqtAeUEMHidVAXZQ_dKmKX0AvM7TUM=s160-c-k-c0x00ffffff-no-rj",
+    "country": "Australia",
+    "niche": "Fitness"
   }
 ]
