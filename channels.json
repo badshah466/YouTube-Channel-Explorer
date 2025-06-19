@@ -1,23 +1,22 @@
 [
   {
-    "name": "Fitness Pro",
-    "subscribers": 15000,
-    "country": "US",
-    "keyword": "fitness",
-    "link": "https://youtube.com/@fitnesspro"
+    "name": "Graham Stephan",
+    "subs": "700K",
+    "url": "https://www.youtube.com/channel/UCV6KDgJskWaEckne5aPA0aQ"
   },
   {
-    "name": "CodeWithSam",
-    "subscribers": 55000,
-    "country": "IN",
-    "keyword": "coding",
-    "link": "https://youtube.com/@codewithsam"
+    "name": "MrBeast",
+    "subs": "250M",
+    "url": "https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA"
   },
   {
-    "name": "Marketing Tips",
-    "subscribers": 120000,
-    "country": "UK",
-    "keyword": "marketing",
-    "link": "https://youtube.com/@marketingtips"
+    "name": "Ali Abdaal",
+    "subs": "5M",
+    "url": "https://www.youtube.com/channel/UCoOae5nYA7VqaXzerajD0lg"
+  },
+  {
+    "name": "Marques Brownlee",
+    "subs": "18M",
+    "url": "https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ"
   }
 ]
