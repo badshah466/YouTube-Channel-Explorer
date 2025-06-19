@@ -6,6 +6,12 @@ fetch('channels.json')
     data.forEach(channel => {
       const channelId = channel.url.split('/').pop();
 
+      // Construct YouTube logo URL
+      const logoURL = `https://yt3.ggpht.com/ytc/${channelId}=s88-c-k-c0x00ffffff-no-rj`;
+
+      // Fallback logo using ui-avatars if YouTube logo fails
+      const fallbackLogo = `https://ui-avatars.com/api/?name=${encodeURIComponent(channel.name)}&background=FF0000&color=fff&rounded=true`;
+
       const card = document.createElement('div');
       card.style.cssText = `
         display: flex;
@@ -19,7 +25,7 @@ fetch('channels.json')
       `;
 
       card.innerHTML = `
-        <img src="https://yt3.ggpht.com/ytc/${channelId}=s88-c-k-c0x00ffffff-no-rj" alt="${channel.name}" width="60" style="border-radius:50%;" />
+        <img src="${logoURL}" alt="${channel.name}" width="60" style="border-radius: 50%;" onerror="this.onerror=null; this.src='${fallbackLogo}'" />
         <div>
           <a href="${channel.url}" target="_blank" style="text-decoration:none;color:#000;font-size:18px;font-weight:bold;">
             ${channel.name}
